@@ -1,19 +1,21 @@
-name: "Maintenance - Garbage Collection"
+name: "Maintenance — Garbage Collection"
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "10 7 * * *"
-  workflow_dispatch:
   push:
-      paths: 
-        - '.github/workflows/system-garbage-collection.yml'
-        - 'utils/cleanup/**/*'
+    paths: 
+      - '.github/workflows/system-garbage-collection.yml'
+      - 'utils/cleanup/**/*'
+
 jobs:
   system-cleanup:
     runs-on:
       group: maintenance
+
     steps:
       - uses: actions/checkout@v4
+
       - run: bash ./garbage-collect.sh
         working-directory: utils/cleanup
-        

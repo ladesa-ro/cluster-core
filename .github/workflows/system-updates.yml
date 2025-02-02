@@ -1,9 +1,9 @@
-name: "Maintenance - System Updates"
+name: "Maintenance — System Updates"
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "30 3 * * 6,0-2"
-  workflow_dispatch:
   push:
     paths: 
       - '.github/workflows/system-updates.yml'
@@ -14,6 +14,7 @@ jobs:
       group: maintenance
     
     steps:
-      - name: update with topgrade
-        run: topgrade --yes --skip-notify
-        
+      - uses: actions/checkout@v4
+
+      - run: bash ./update-system.sh
+        working-directory: utils/system-updates
