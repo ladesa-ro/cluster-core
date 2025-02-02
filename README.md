@@ -1,7 +1,7 @@
 # Infrastructure Maintenance
 
-![Maintenance - System Updates](https://img.shields.io/github/actions/workflow/status/ladesa-ro/manutencao-devops/system-updates.yml?branch=main&style=for-the-badge&logo=github&label=Maintenance%20-%20System%20Updates&labelColor=%23111)
-![Maintenance - Garbage Collection](https://img.shields.io/github/actions/workflow/status/ladesa-ro/manutencao-devops/system-garbage-collection.yml?branch=main&style=for-the-badge&logo=github&label=Maintenance%20-%20Garbage%20Collection&labelColor=%23111)
+[![Maintenance - System Updates](https://img.shields.io/github/actions/workflow/status/ladesa-ro/manutencao-devops/system-updates.yml?branch=main&style=for-the-badge&logo=github&label=Maintenance%20-%20System%20Updates&labelColor=%23111)](.github/workflows/system-updates.yml)
+[![Maintenance - Garbage Collection](https://img.shields.io/github/actions/workflow/status/ladesa-ro/manutencao-devops/system-garbage-collection.yml?branch=main&style=for-the-badge&logo=github&label=Maintenance%20-%20Garbage%20Collection&labelColor=%23111)](.github/workflows/system-garbage-collection.yml)
 
 ## System Updates
 
@@ -13,7 +13,7 @@ Workflow: [.github/workflows/system-updates.yml](.github/workflows/system-update
 topgrade --yes --skip-notify
 ```
 
-Related
+See also
 
 - [topgrade](https://github.com/topgrade-rs/topgrade#readme)
 
@@ -31,7 +31,7 @@ Scripts
 - [./utils/cleanup/docker/prune-containers-and-images.sh](./utils/cleanup/docker/prune-containers-and-images.sh);
 - [./utils/cleanup/cluster/k3s/nodes-images-cache-prune.sh](./utils/cleanup/cluster/k3s/nodes-images-cache-prune.sh);
 
-Related
+See also
 
 - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 - [distribution registry - garbage collection](https://distribution.github.io/distribution/about/garbage-collection/)
