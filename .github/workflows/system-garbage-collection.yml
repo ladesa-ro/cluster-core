@@ -9,6 +9,10 @@ on:
       - '.github/workflows/system-garbage-collection.yml'
       - 'utils/cleanup/**/*'
 
+concurrency:
+  group: maintenance
+  cancel-in-progress: false
+
 jobs:
   system-cleanup:
     runs-on:
