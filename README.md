@@ -9,9 +9,9 @@ Workflow: [.github/workflows/system-updates.yml](.github/workflows/system-update
 
 > Runs at 03:30 (UTC), only on Saturday and Sunday through Tuesday. 
 
-```bash
-topgrade --yes --skip-notify
-```
+Scripts
+
+[./utils/system-updates/update-system.sh](./utils/system-updates/update-system.sh)  
 
 See also
 
