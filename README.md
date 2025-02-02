@@ -11,11 +11,26 @@ Runs at 03:30 (UTC), only on Saturday and Sunday through Tuesday.
 topgrade --yes --skip-notify
 ```
 
+Related
+
+- [topgrade](https://github.com/topgrade-rs/topgrade#readme)
+
 ## Garbage Collection
 
 Runs at 07:10 (UTC). 
 
-- [./cluster/k8s-orphaned-replicasets.sh](./utils/cleanup/garbage-collect.sh);
-- [./registry/registry-unreferenced-blobs.sh](./registry/registry-unreferenced-blobs.sh);
-- [./docker/prune-containers-and-images.sh](./docker/prune-containers-and-images.sh);
-- [./cluster/k3s/nodes-images-cache-prune.sh](./cluster/k3s/nodes-images-cache-prune.sh);
+- [./utils/cleanup/cluster/k8s-orphaned-replicasets.sh](./utils/cleanup/cluster/k8s-orphaned-replicasets.sh);
+- [./utils/cleanup/registry/registry-unreferenced-blobs.sh](./utils/cleanup/registry/registry-unreferenced-blobs.sh);
+- [./utils/cleanup/docker/prune-containers-and-images.sh](./utils/cleanup/docker/prune-containers-and-images.sh);
+- [./utils/cleanup/cluster/k3s/nodes-images-cache-prune.sh](./utils/cleanup/cluster/k3s/nodes-images-cache-prune.sh);
+
+Related
+
+- [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+- [distribution registry - garbage collection](https://distribution.github.io/distribution/about/garbage-collection/)
+- [docker prune](https://docs.docker.com/reference/cli/docker/system/prune/)
+- [k3s crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md#usage)
+
+---
+
+2024 – present, Ladesa.
