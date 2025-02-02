@@ -5,7 +5,9 @@
 
 ## System Updates
 
-Runs at 03:30 (UTC), only on Saturday and Sunday through Tuesday. 
+Workflow: [.github/workflows/system-updates.yml](.github/workflows/system-updates.yml)
+
+> Runs at 03:30 (UTC), only on Saturday and Sunday through Tuesday. 
 
 ```bash
 topgrade --yes --skip-notify
@@ -17,8 +19,13 @@ Related
 
 ## Garbage Collection
 
-Runs at 07:10 (UTC). 
+Workflow: [.github/workflows/system-garbage-collection.yml](.github/workflows/system-garbage-collection.yml)
 
+> Runs at 07:10 (UTC). 
+
+Scripts
+
+[./utils/cleanup/garbage-collect.sh](./utils/cleanup/garbage-collect.sh)  
 - [./utils/cleanup/cluster/k8s-orphaned-replicasets.sh](./utils/cleanup/cluster/k8s-orphaned-replicasets.sh);
 - [./utils/cleanup/registry/registry-unreferenced-blobs.sh](./utils/cleanup/registry/registry-unreferenced-blobs.sh);
 - [./utils/cleanup/docker/prune-containers-and-images.sh](./utils/cleanup/docker/prune-containers-and-images.sh);
