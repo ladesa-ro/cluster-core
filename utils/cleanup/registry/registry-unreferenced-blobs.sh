@@ -18,4 +18,9 @@ do
   done;
 done;
 
+kubectl rollout restart \
+  deployment.apps/registry \
+  --namespace ladesa-ro-production \
+;
+
 echo "Unreferenced registry blobs garbage collected."
